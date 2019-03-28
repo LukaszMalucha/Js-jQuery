@@ -89,26 +89,28 @@
                     <div class="card menu-card weather">
 
                         <div class="card-content white-text">
-                            <span class="card-title" id="weather">Loading...</span>
-
-                            <div class="row plain-element">
-                                <div class="col-md-4">
-                                    <p id="info1a">Temperature</p>
-                                    <p id="info1b">Temperature</p>
-                                    <button id="switch" class="btn btn-small">Fahrenheit</button>
-                                </div>
-                                <div class="col-md-4">
-                                    <p id="info2a">Temperature</p>
-                                    <p id="info2b">Temperature</p>
-                                </div>
-                                <div class="col-md-4">
-                                    <p id="info3a">Temperature</p>
-                                    <p id="info3b">Temperature</p>
-                                </div>
-
-                            </div>
-
-
+                            <span id="weather-title">Loading...</span>
+                            <br><br>
+                            <table class="table table-weather">
+                                <tbody>
+                                <tr>
+                                    <td>Time:</td>
+                                    <td><b id="clock"></b></td>
+                                </tr>
+                                <tr>
+                                    <td>Temperature:</td>
+                                    <td><b id="info2"></b></td>
+                                </tr>
+                                <tr>
+                                    <td>Wind:</td>
+                                    <td><b id="info3"></b></td>
+                                </tr>
+                                <tr>
+                                    <td>Humidity:</td>
+                                    <td><b id="info4"></b></td>
+                                </tr>
+                                </tbody>
+                            </table>
                         </div>
 
                     </div>

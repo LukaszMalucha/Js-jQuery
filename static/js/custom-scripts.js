@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 // Weather App
-    $('#weather').hide();
+//    $('#weather').hide();
     if (navigator.geolocation) {
         var currentPosition = '';
         navigator.geolocation.getCurrentPosition(function(position){
@@ -21,14 +21,58 @@ $(document).ready(function() {
                 var city = json.location.name;
                 var state = json.location.region;
 
-                var temp = json.current.temp_c;
+                var temp_c = json.current.temp_c;
                 var temp_f = json.current.temp_f;
-                var last_updated = json.current.last_updated.replace('-'. ' ');
+                var last_updated = json.current.last_updated.replace('-', ' ');
 
                 var wind = json.current.wind_kph;
                 var humidity = json.current.humidity;
                 var time = json.location.localtime.split(' ')[1];
                 var cloud = json.current.cloud;
+//           Once the data shows up
+                $('#weather-title').html(city + ', ' + state + ', ' + country);
+
+                if (temp_c >= 18) {
+                    $('.weather').css({
+                        backgroundImage: 'url(static/img/sunny.jpg)'
+                    });
+                } else if (temp_c > 5 && temp_c < 18) {
+                    $('.weather').css({
+                        backgroundImage: 'url(static/img/clouds.jpg)'
+                    });
+                } else {
+                    $('.weather').css({
+                        backgroundImage: 'url(static/img/cold.jpg)'
+                    });
+                }
+
+
+
+                $('#clock').html(time);
+                $('#info2').html(temp_c + '&#8451');
+                $('#info3').html(wind + 'kph');
+                $('#info4').html(humidity);
+
+                var yes = true;
+                $('#switch').on('click', function(){
+//                toggle button
+                    if (yes) {
+                     $('#info2').html(temp_f + '&#8457');
+                     $('#switch').html('Show in Celsius');
+                     yes = false;
+                    } else {
+                        $('#info2').html(temp_c + '&#8451');
+                        $('#switch').html('Show in Fahrenheit');
+                        yes = true;
+                    }
+                });
+//                 Sky status
+                if (cloud <= 30) {
+                    $('sky').html('Clear Sky');
+                } else {
+                    $('sky').html('Cloudy Sky');
+                }
+                $('')
             });
         });
     }

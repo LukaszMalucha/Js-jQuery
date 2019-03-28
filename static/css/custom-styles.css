@@ -106,7 +106,7 @@ a {
     width: 100%;
     text-align: center !important;
     margin: auto;
-    padding: 0% 20% 0% 20%;
+    padding: 0% 10% 0% 10%;
 
 
 
@@ -121,14 +121,13 @@ a {
 }
 
 .weather {
-    background-image: url('../../static/img/sunny_cloudy.jpg');
-
-
+    background-image: url('../../static/img/weather.png');
+    background-size: cover;
+    font-size: 24px !important;
+    font-weight: bold !important;
 }
 
-.weather .card-title {
-    color: white !important;
-}
+
 
 
 
@@ -178,6 +177,28 @@ a {
  color: #1DA1F2 !important;
 }
 
+#weather-title {
+    font-size: 26px;
+}
+
+#clock {
+    font-size: 24px;
+}
+
+/*----------------------------------------------
+    TABLES
+------------------------------------------------*/
+
+.table-weather {
+ width: 80%;
+ margin: auto;
+}
+
+
+.table-weather tr,
+.table > tbody > tr > td {
+    border: none;
+}
 
 /*----------------------------------------------
     MEDIA QUERIES
