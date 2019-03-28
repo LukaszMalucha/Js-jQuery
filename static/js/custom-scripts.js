@@ -1,3 +1,36 @@
+function ajaxCall(){
+    $.ajax({
+    //  Get the value of an input field
+        url: 'https://en.wikipedia.org/w/api.php?action=query&list=search&format=json&srsearch='+ $('#search').val(),
+        dataType: 'jsonp',
+        type: 'GET',
+        success: function(data){
+//      clean it before each request
+            $('#update').empty();
+            var data = JSON.stringify(data);
+            data = JSON.parse(data);
+            // loop through data and output
+            var output = '';
+            data.query.search.forEach(function(data){
+                var title = "<h5>" + data.title +  "</h5>" + "<br>";
+                var snippet = "<p>" + data.snippet +  "</p>";
+                var url = '<a href="https://en.wikipedia.org/wiki/' + data.title + '" target=_blank">';
+                var endUrl = "</a>";
+                output += url + title + endUrl + snippet + "<hr>";
+            });
+            $('#update').append(output);
+        }
+    });
+}
+
+
+function randomFunction(){
+    $('#update').empty();
+    $('#search').empty();
+    $('iframe').attr('src', 'https://en.wikipedia.org/wiki/Special:Random');
+}
+
+
 $(document).ready(function() {
 
 // Weather App
@@ -106,6 +139,27 @@ $(document).ready(function() {
         });
 
     })
+
+
+// Wiki App
+
+    $('#search').focus();
+    $('#search').off("keyup");
+//    start typing....
+    $('#search').on("keyup", function(){
+
+        ajaxCall();
+        $('iframe').attr('src', '');
+    });
+
+//    Random Wiki Article
+
+    $('.random').on('click', function(){
+        randomFunction();
+        $(this).text('Another Article');
+
+    });
+
 
 
 

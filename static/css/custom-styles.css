@@ -42,33 +42,6 @@ html {
     text-align: center;
 }
 
-.btn {
-    color: white;
-    background-color: #6ba546;
-    border: none;
-    width: 30%;
-    margin: 0;
-    font-weight: bold;
-    font-size: 12px;
-}
-
-.btn-enter {
-    background-color: #2d4b65;
-    width: 100%;
-    text-align: right;
-    font-size: 14px;
-}
-
-.btn-enter i {
-    font-size: 16px;
-}
-
-.btn-enter:hover,
-.btn-enter:focus,
-.btn-enter:active {
-    background-color: #1f3039;
-    color: white;
-}
 
 .header {
     min-height: 72px;
@@ -110,7 +83,7 @@ a {
     width: 100%;
     text-align: center !important;
     margin: auto;
-    padding: 0% 10% 0% 10%;
+    padding: 1% 5% 0% 5%;
 
 
 
@@ -125,7 +98,7 @@ a {
 }
 
 .weather {
-    background-image: url('../../static/img/weather.png');
+    background-image: url('../../static/img/weather.jpg');
     background-size: cover;
     font-size: 24px !important;
     font-weight: bold !important;
@@ -139,8 +112,9 @@ a {
     box-shadow: 0 3px 3px 0 #A9A9A9, 0 3px 1px -2px #838383, 0 1px 5px 0 #838383;
     width: 90%;
     margin: 0 auto;
-    margin-bottom: 50px;
+    margin-bottom: 80px;
     float: none;
+
 }
 
 .menu-card:hover {
@@ -160,26 +134,12 @@ a {
 }
 
 .card .card-title {
-    font-size: 1.4rem;
+    font-size: 2rem;
+    font-weight: bold;
     min-height: 70px;
 }
 
-.tweetQuote {
-    background: #4ab3f4;
-    border-radius: 15px;
-    color: white;
-    width: 20%;
-}
 
-.tweetQuote:hover,
-.tweetQuote:active {
-    background: #1DA1F2;
-    color: white;
-}
-
-.quoteAuthor {
- color: #1DA1F2 !important;
-}
 
 #weather-title {
     font-size: 26px;
@@ -187,6 +147,85 @@ a {
 
 #clock {
     font-size: 24px;
+}
+
+
+.searchbox {
+    width: 50%;
+    margin: auto;
+}
+
+#update {
+    width: 80%;
+    margin: auto;
+    text-align: left;
+}
+
+
+.searchResults {
+    max-height: 400px;
+    overflow: auto;
+}
+
+iframe {
+    max-height: 500px;
+}
+
+/*----------------------------------------------
+    BUTTONS
+------------------------------------------------*/
+
+
+.btn {
+    color: white;
+    background-color: #2d4b65;
+    border: none;
+    width: 40%;
+    margin: 0;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.btn-enter {
+    background-color: #2d4b65;
+    width: 100%;
+    text-align: right;
+    font-size: 14px;
+}
+
+.btn-enter i {
+    font-size: 16px;
+}
+
+.btn:hover,
+.btn:active,
+.btn:focus {
+    background: #1DA1F2;
+    color: white;
+
+}
+
+.btn-enter:hover,
+.btn-enter:focus,
+.btn-enter:active {
+    background-color: #1f3039;
+    color: white;
+}
+
+
+
+.tweetQuote {
+    background: #4ab3f4;
+    border-radius: 15px;
+    color: white;
+    width: 40%;
+}
+
+.tweetQuote:hover,
+.tweetQuote:active,
+.tweetQuote:focus,{
+    background: #1DA1F2 !important;
+    color: white;
 }
 
 /*----------------------------------------------
