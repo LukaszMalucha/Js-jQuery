@@ -79,7 +79,10 @@ a {
     color: #4267b2
 }
 
-
+.plain-element {
+    margin: 0px;
+    padding: 0px;
+}
 
 /*----------------------------------------------
    DASHBOARD STYLES    
@@ -103,7 +106,7 @@ a {
     width: 100%;
     text-align: center !important;
     margin: auto;
-    padding: 0% 30% 0% 30%;
+    padding: 0% 20% 0% 20%;
 
 
 
@@ -116,6 +119,18 @@ a {
 .card .card-image img {
     border-bottom: 1px solid #DCDCDC;
 }
+
+.weather {
+    background-image: url('../../static/img/sunny_cloudy.jpg');
+
+
+}
+
+.weather .card-title {
+    color: white !important;
+}
+
+
 
 .menu-card {
     box-shadow: 0 3px 3px 0 #A9A9A9, 0 3px 1px -2px #838383, 0 1px 5px 0 #838383;
