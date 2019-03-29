@@ -1,6 +1,6 @@
-## JS
+## JQuery
 
-#### jQuery - News
-https://lukaszmalucha.github.io/Js-React/
-#### jQUery - Weather App
+
+https://lukaszmalucha.github.io/Js-jQuery/
+
 
