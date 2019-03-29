@@ -129,8 +129,8 @@ $(document).ready(function() {
             currentQuote = quotes[Math.floor(Math.random() * quotes.length)];
             console.log(currentQuote);
 
-            $('.card-title').html(currentQuote.title);
-            $('.card-title').attr('href', currentQuote.url).attr('target', '_blank');
+            $('.news-title').html(currentQuote.title);
+            $('.news-title').attr('href', currentQuote.url).attr('target', '_blank');
             $('.quoteAuthor').html(currentQuote.author);
 
             $('.tweetQuote').attr('href', 'https://twitter.com/intent/tweet?text= ' + currentQuote.title + ' - ' + currentQuote.author
